@@ -138,71 +138,120 @@
 #include <ctype.h>
 #include <limits.h>
 
-enum Status {
-	VALID,
-	INVALID,
-};
+//enum Status {
+//	VALID,
+//	INVALID,
+//};
+//
+//enum Status sta = INVALID;
+//int my_atoi(const char* str )
+//{
+//	int flag = 1;
+//	assert(str);
+//	if (*str == '\0')
+//		return 0;
+//	while (isspace(*str))
+//	{
+//		str++;
+//	}
+//	if (*str == '+')
+//	{
+//		flag = 1;
+//		str++;
+//	}
+//	else if(*str == '-')
+//	{
+//		flag = -1;
+//		str++;
+//	}
+//	long long ret = 0;
+//	while (*str)
+//	{
+//		if (isdigit(*str))
+//		{
+//			ret = ret * 10 + flag * (*str - '0');
+//			//判断越界
+//			if (ret > INT_MAX || ret < INT_MIN)
+//			{
+//				return 0;
+//			}
+//			str++;
+//		}
+//		else
+//		{
+//			return (int)ret;
+//		}
+//
+//	}
+//
+//
+//	sta = VALID;
+//	return (int) ret ;
+//}
+//
+//
+//
+//int main()
+//{
+//	char arr[20] = "-123abc456";
+//	int ret = my_atoi(arr);
+//	if (sta == INVALID)
+//	{
+//		printf("非法返回:%d\n", ret);
+//	}
+//	else
+//	{
+//		printf("合法返回:%d\n", ret);
+//	}
+//	printf("%d", ret);
+//	return 0;
+//}
 
-enum Status sta = INVALID;
-int my_atoi(const char* str )
-{
-	int flag = 1;
-	assert(str);
-	if (*str == '\0')
-		return 0;
-	while (isspace(*str))
-	{
-		str++;
-	}
-	if (*str == '+')
-	{
-		flag = 1;
-		str++;
-	}
-	else if(*str == '-')
-	{
-		flag = -1;
-		str++;
-	}
-	long long ret = 0;
-	while (*str)
-	{
-		if (isdigit(*str))
-		{
-			ret = ret * 10 + flag * (*str - '0');
-			//判断越界
-			if (ret > INT_MAX || ret < INT_MIN)
-			{
-				return 0;
-			}
-			str++;
-		}
-		else
-		{
-			return (int)ret;
-		}
+//12345678123456781234567812345678
+//01010101010101010101010101010101
+//0x55555555
 
-	}
+//10101010101010101010101010101010
+//0xaaaaaaaa\
 
+//#define SWAP_BIT(n) ((((n&0x55555555)<<1)+((n&0xaaaaaaaa)>>1)))
+//
+//int main()
+//{
+//	unsigned int n = -2;
+//	n = SWAP_BIT(n);
+//	printf("%d", n);
+//
+//	return 0;
+//}
 
-	sta = VALID;
-	return (int) ret ;
-}
-
-
+#include <math.h>
 
 int main()
 {
-	char arr[20] = "-123abc456";
-	int ret = my_atoi(arr);
-	if (sta == INVALID)
+	int n = 0;
+	scanf("%d", n);
+	int a = 0;
+	int b = 1;
+	int c = a + b;
+	while (1)
 	{
-		printf("非法返回:%d\n", ret);
+		if (n == 1)
+		{
+			printf("0\n");
+			break;
+		}
+		else if (n < b)
+		{
+
+			//version 1
+			int ret = (n - a) < (b - n) ? (n - a) : (b - n);
+			printf("%d\n", ret);
+			break;
+		}
+		c = a + b;
+		a = b;
+		b = c;
 	}
-	else
-	{
-		printf("合法返回:%d\n", ret);
-	}
-	printf("%d", ret);
 	return 0;
 }
