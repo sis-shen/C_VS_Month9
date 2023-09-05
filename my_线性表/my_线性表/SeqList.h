@@ -9,7 +9,7 @@
 typedef int SLDataType;
 
 typedef struct SeqList {
-	SLDataType* arr;
+	SLDataType* arr = NULL;
 	int size;
 	int capacity;
 }SL;
@@ -20,11 +20,11 @@ void SeqListDestroy(SL* ps);//销毁顺序表
 void SeqListPushBack(SL* ps,SLDataType x); //尾插
 void SeqListPopBack(SL* ps); //尾删
 void SeqListPushFront(SL* ps, SLDataType x); //尾插
-void SeqListPopFront(SL* ps);
+void SeqListPopFront(SL* ps);//头删
 
-int SeqListInsert(SL* ps, SLDataType x, int pos);//将x插入pos
+void SeqListInsert(SL* ps, SLDataType x, int pos);//将x插入pos
 void SeqListErase(SL* ps, int pos);//删除下标为pos的元素
 
-void SeqListFind(SL* ps, SLDataType x);//查找元素x,找到了就返回下标，找不到就返回-1
+int SeqListFind(SL* ps, SLDataType x);//查找元素x,找到了就返回下标，找不到就返回-1
 
 void SeqListPrintInt(SL* ps);//打印顺序表内所有元素
