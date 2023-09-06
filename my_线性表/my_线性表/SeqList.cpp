@@ -104,10 +104,10 @@ int SeqListFind(SL* ps, SLDataType x)
 
 void SeqListInsert(SL* ps, SLDataType x, int pos)
 {
-	if (pos<0 || pos >ps->size - 1)
+	if (pos<0 || pos >ps->size)
 	{
 		printf("非法下标\n");
-		assert(1);
+		assert(0);
 	}
 	CheckCapacity(ps);
 
@@ -124,7 +124,7 @@ void SeqListErase(SL* ps, int pos) //删除下标为pos的元素
 	if (pos<0 || pos >ps->size - 1)
 	{
 		printf("非法下标\n");
-		assert(1);
+		assert(0);
 	}
 	CheckCapacity(ps);
 	for (int i = pos; i < (ps->size - 1); i++)
