@@ -208,8 +208,8 @@
 //}
 
 //*************************
-////1018修墙壁
-//
+//1018修墙壁
+
 //#include <stdio.h>
 //#include <stdlib.h>
 //
@@ -222,7 +222,7 @@
 //{	
 //	int m = 0;
 //	int n = 0;
-//	while (scanf(" %d %d", &m, &n) != EOF)
+//	while (scanf(" %d %d", &m, &n) != EOF >0)
 //	{
 //		if (m == 0)
 //		{
@@ -260,32 +260,174 @@
 //
 //	return 0;
 //}
+//
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5 };
+//	int n = 5;
+//	for (int j = 0; j < n; j++)
+//	{
+//		for (int i = 0; i < n - j; i++)
+//		{
+//			if (arr[j] <= arr[j + i])
+//			{
+//				int tmp = arr[j];
+//				arr[j] = arr[j + i];
+//				arr[j + i] = tmp;
+//			}
+//			else
+//				continue;
+//
+//		}
+//	}
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	_Printf_format_string_
+//	return 0;
+//}
 
+//****************************************
+////1760 各位数之和
+//
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int num = 0;
+//	while (scanf(" %d", &num) != EOF)
+//	{
+//		int sum = 0;
+//		while (num)
+//		{
+//			sum = sum + num % 10;
+//			num = num / 10;
+//		}
+//		printf("%d\n", sum);
+//	}
+//	return 0;
+//}
+
+//****************************
+//1759闰年
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int year = 0;
+//	while (scanf("%d", &year) != EOF)
+//	{
+//		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+//		{
+//			printf("YES\n");
+//		}
+//		else
+//		{
+//			printf("NO\n"); 
+//		}
+//	}
+//	return 0;
+//}
+
+//******************************
+//1726: 最小公倍数之和
+//#include <stdio.h>
+//
+//int lcMutiple(int a, int b,int max)//返回a+b;否则返回0
+//{
+//	for (int i = 1; i < max; i++)
+//	{
+//		if (a*i%b == 0)
+//		{
+//			return a * i;
+//		}
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	while (scanf(" %d", &n) != EOF)
+//	{
+//		int ret = n;
+//		
+//		printf("%d\n", ret);
+//	}
+//	return 0;
+//}
+
+//*********************************
+
+////1389: 去掉空格
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[80] = { 0 };
+//
+//	while (gets_s(str))
+//	{
+//		char* slow = str;
+//		char* fast = str;
+//		while (*fast != 0)
+//		{
+//			if (*fast == ' ')
+//			{
+//				while (*fast == ' ')
+//				{
+//					fast = fast + 1;
+//				}
+//				*slow = *fast;
+//				slow++;
+//				fast++;
+//			}
+//			else
+//			{
+//				*slow = *fast;
+//				slow++;
+//				fast++;
+//			}
+//		}
+//		while (slow < fast)
+//		{
+//			*slow = '\0';
+//			slow++;
+//		}
+//		printf(str);
+//		printf("\n");
+//
+//		for (int i = 0; i < 80; i++)//重置str
+//		{
+//			str[i] = 0;
+//		}
+//	}
+//	return 0;
+//}
+
+//********************************************
+
+//1670: 22-循环-2-打印沙漏
 #include <stdio.h>
+
+int count(int n)
+{
+	//n层沙漏
+	return 2 * () - 1;
+}
 
 int main()
 {
-	int arr[] = { 1,2,3,4,5 };
-	int n = 5;
-	for (int j = 0; j < n; j++)
+	int max = 0;
+	while (scanf("%d", &max) != EOF)
 	{
-		for (int i = 0; i < n - j; i++)
-		{
-			if (arr[j] <= arr[j + i])
-			{
-				int tmp = arr[j];
-				arr[j] = arr[j + i];
-				arr[j + i] = tmp;
-			}
-			else
-				continue;
 
-		}
+
+
 	}
-	for (int i = 0; i < n; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	_Printf_format_string_
+
 	return 0;
 }
