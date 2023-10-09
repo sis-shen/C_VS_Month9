@@ -410,24 +410,87 @@
 
 //********************************************
 
-//1670: 22-循环-2-打印沙漏
-#include <stdio.h>
+////1670: 22-循环-2-打印沙漏
+//#include <stdio.h>
+//
+//int count(int n)
+//{
+//	//n层沙漏
+//	return 2 * () - 1;
+//}
+//
+//int main()
+//{
+//	int max = 0;
+//	while (scanf("%d", &max) != EOF)
+//	{
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
 
-int count(int n)
-{
-	//n层沙漏
-	return 2 * () - 1;
-}
 
-int main()
-{
-	int max = 0;
-	while (scanf("%d", &max) != EOF)
-	{
+//**********************************
+////1761 22-循环-1-输出图形
+//
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int n = 0;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int blank = 0;
+//		for (int i = 1; i <= n; i++)
+//		{
+//			int tmp = blank;
+//			if (i >= 10)
+//			{
+//				tmp--;
+//			}
+//			for (int j = 0; j < tmp; j++)
+//			{
+//				printf(" ");
+//			}
+//			printf("%d\n", i);
+//			blank++;
+//
+//		}
+//		printf("\n");
+//
+//	}
+//
+//	return 0;
+//}
 
+//*****************************
+//1570: 熊二的梦想（10分）
 
-
-	}
-
-	return 0;
-}
+//#include <stdio.h>
+//
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	while (scanf("%d %d", &a, &b) != EOF)
+//	{
+//		double ma = (double)a;
+//		double mb = (double) b;
+//		int count = 0;
+//		while (1)
+//		{
+//			ma *= 3.0;
+//			mb *= 2.0;
+//			count++;
+//			if (ma > mb)
+//			{
+//				printf("%d\n", count);
+//				break;
+//			}
+//		}
+//	}
+//}
