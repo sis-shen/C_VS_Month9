@@ -494,3 +494,27 @@
 //		}
 //	}
 //}
+
+//*************************
+//1646: 22-输入输出-3-1的个数
+#include <stdio.h>
+
+int main()
+{
+	int input = 0;
+	while (scanf("%d", &input) != EOF)
+	{
+		int num = input;
+		int ret = 0;
+		while (num)
+		{
+			if (num % 2 == 1)
+			{
+				ret++;
+			}
+			num /= 2;
+		}
+		printf("%d\n", ret);
+	}
+	return 0;
+}
